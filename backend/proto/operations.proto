@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package minetech.operations;
+
+// Exposed by core-service. Consumed by notification-service to enrich
+// incident notifications with real data instead of trusting the event
+// payload alone (the event only carries IDs).
+service OperationsService {
+  rpc GetIncidentDetail(GetIncidentDetailRequest) returns (IncidentDetail);
+  rpc GetDashboardStats(GetDashboardStatsRequest) returns (DashboardStats);
+}
+
+message GetIncidentDetailRequest {
+  string incidentId = 1;
+  string tenantId = 2;
+}
+
+message IncidentDetail {
+  string id = 1;
+  string tenantId = 2;
+  string workerName = 3;
+  string location = 4;
+  string status = 5;
+  string reportedByEmail = 6;
+  string createdAt = 7;
+}
+
+message GetDashboardStatsRequest {
+  string tenantId = 1;
+}
+
+message DashboardStats {
+  int32 workersOnShift = 1;
+  int32 openIncidents = 2;
+  int32 resolvedToday = 3;
+}

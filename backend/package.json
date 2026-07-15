@@ -1,0 +1,24 @@
+{
+  "name": "minetech-backend",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "yarn@4.4.1",
+  "workspaces": [
+    "libs/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach -Apt run build",
+    "start:gateway": "yarn workspace api-gateway start:dev",
+    "start:core": "yarn workspace core-service start:dev",
+    "start:notification": "yarn workspace notification-service start:dev",
+    "migration:run": "yarn workspace core-service migration:run",
+    "migration:generate": "yarn workspace core-service migration:generate",
+    "seed": "yarn workspace core-service seed",
+    "infra:up": "docker compose -f docker-compose.infra.yml up -d",
+    "infra:down": "docker compose -f docker-compose.infra.yml down"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@minetech/common": ["../../libs/common/src"],
+      "@minetech/common/*": ["../../libs/common/src/*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}
