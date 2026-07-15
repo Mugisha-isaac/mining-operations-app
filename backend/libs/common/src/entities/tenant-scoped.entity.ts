@@ -1,4 +1,10 @@
-import { CreateDateColumn, Index, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  Index,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 /**
  * Every tenant-owned table extends this. `tenantId` is indexed and every
@@ -11,6 +17,7 @@ export abstract class TenantScopedEntity {
   id: string;
 
   @Index()
+  @Column()
   tenantId: string;
 
   @CreateDateColumn()

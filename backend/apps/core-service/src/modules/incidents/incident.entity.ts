@@ -25,6 +25,6 @@ export class Incident extends TenantScopedEntity {
   @Column()
   reportedByEmail: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'uuid', nullable: true })
   workerId: string | null;
 }

@@ -315,6 +315,7 @@ __metadata:
     reflect-metadata: "npm:^0.2.2"
     rxjs: "npm:^7.8.1"
     typeorm: "npm:^0.3.20"
+    typescript: "npm:5.5.4"
   languageName: unknown
   linkType: soft
 
