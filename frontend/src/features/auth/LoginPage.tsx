@@ -62,10 +62,6 @@ export function LoginPage() {
             {mutation.isPending ? 'Signing in...' : 'Sign in'}
           </Button>
         </form>
-
-        <p className="mt-4 text-xs text-stone-400">
-          Seeded users: admin@minetech.rw / supervisor@minetech.rw, password Password123!
-        </p>
       </Card>
     </div>
   );
