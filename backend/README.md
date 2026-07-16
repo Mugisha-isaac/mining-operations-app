@@ -7,7 +7,7 @@ track through reported → under review → resolved).
 Built as a NestJS monorepo with three apps behind a shared workspace:
 
 ```
-minetech-backend/
+backend/
 ├── docker-compose.infra.yml   # Postgres, Redis, RabbitMQ, MinIO
 ├── proto/operations.proto     # shared gRPC contract
 ├── libs/common/               # enums, JWT/permission guards, tenant-scoped

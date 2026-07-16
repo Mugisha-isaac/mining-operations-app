@@ -1,7 +1,7 @@
 # MineTech Frontend
 
 React 19 + Vite frontend for the MineTech operations warm-up app. Talks to
-the [minetech-backend](../minetech-backend) api-gateway over REST and to
+the [backend](../backend) api-gateway over REST and to
 core-service directly over socket.io for live updates.
 
 ## Stack
@@ -15,7 +15,7 @@ socket.io-client.
 
 - Node.js 20.x
 - pnpm (`corepack enable pnpm` or `npm i -g pnpm`)
-- The backend running (see `minetech-backend/README.md`)
+- The backend running (see `backend/README.md`)
 
 ## Setup
 
